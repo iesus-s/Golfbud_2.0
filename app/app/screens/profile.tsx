@@ -148,10 +148,7 @@ export default function ProfileScreen() {
           <ThemedView style={styles.divider} />
 
           {/* Games (IN PROGRESS) */}
-          <ThemedText type="profile">Games</ThemedText> 
-
-          {/* New Scorecard Button */}
-          <ThemedButton onPress={() => router.push("/screens/new_scorecard")} title="New Scorecard" /> 
+          <ThemedText type="profile">Games</ThemedText>  
 
           <ThemedView style={styles.divider} />
 

@@ -50,6 +50,7 @@ export default function RootLayout() {
           <Stack screenOptions={{ headerShown: false }}>
             <Stack.Screen name="screens/home" options={{ headerShown: false }} /> 
             <Stack.Screen name="screens/profile" options={{ headerShown: false }} />
+            <Stack.Screen name="screens/game" options={{ headerShown: false }} />
             <Stack.Screen name="screens/bets" options={{ headerShown: false }} /> 
             <Stack.Screen name="screens/options" options={{ headerShown: false }} />
           </Stack>
@@ -63,6 +64,9 @@ export default function RootLayout() {
             </TouchableOpacity>
             <TouchableOpacity style={styles.navItem} onPress={() => router.push("/screens/profile")}>
               <ThemedText type="nav">Profile</ThemedText>
+            </TouchableOpacity> 
+            <TouchableOpacity style={styles.navItem} onPress={() => router.push("/screens/game")}>
+              <ThemedText type="nav">Games</ThemedText>
             </TouchableOpacity> 
             <TouchableOpacity style={styles.navItem} onPress={() => router.push("/screens/bets")}>
               <ThemedText type="nav">Bets</ThemedText>

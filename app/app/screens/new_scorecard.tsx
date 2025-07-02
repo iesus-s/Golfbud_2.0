@@ -141,14 +141,12 @@ export default function ScorecardScreen() {
         </ThemedView>
 
         {/* Team Members Section */}
-        <ThemedText type="body">Team Members</ThemedText>
+        <ThemedText type="body">Players</ThemedText>
         <ThemedView style={styles.listContainer}>
           {players.map((member, index) => (
             <ThemedView key={index} style={styles.memberContainer}>
               <ThemedText type="body" style={styles.teamber}>{member}</ThemedText> {/* Just display the username */}
-              <TouchableOpacity style={styles.removeButton} onPress={() => removeMember(index)}>
-                <ThemedText type="body" style={styles.remove}>Remove</ThemedText>
-              </TouchableOpacity>
+              <ThemedButton style={styles.removeButton} onPress={() => removeMember(index)} title="Remove"/> 
             </ThemedView>
           ))}
         </ThemedView>
@@ -234,8 +232,8 @@ const styles = StyleSheet.create({
   },
   listContainer: { 
     flexWrap: 'wrap', 
-    marginTop: 20,
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
     fontSize: 18,   
   },
   memberContainer: {
@@ -252,16 +250,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',  
     marginTop: 10, 
   },
-  removeButton: {
+  removeButton: { 
     backgroundColor: 'red',
-    borderRadius: 5,
-    padding: 5, 
-    justifyContent: 'center',  
-    alignItems: 'center', 
-  }, 
-  remove: { 
-    textAlign: 'center', 
-  },    
+  },  
   buttonContainer: { 
     marginBottom: 20,   
   },
